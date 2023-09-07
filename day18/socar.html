@@ -12,18 +12,45 @@
             padding: 0;
         }
 
+        img {
+            display: block;
+            width: 100%;
+            /* display:block을 써서 800px으로 부모로부터 이어져내려옴 */
+        }
+
+        #intro {
+            background-image: url(img/main_visual_TangWei_fullscreen_photo.jpg);
+            height: 100vh;
+            background-size: cover;
+        }
+
+        #good-socar {
+            background-color: pink;
+            padding: 80px 0;
+
+            display: flex;
+            flex-direction: column;
+            gap: 80px;
+        }
+
         .container {
-            height: 1000px;
+            width: 800px;
+            margin: 0 auto;
         }
 
         .content>h2 {
             color: #222;
-            font-size: 30px;
+            font-size: 38px;
+            font-weight: bold;
+            margin-bottom: 24px;
         }
 
         .content>p {
-            color: gray;
+            color: #BBB;
             font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 48px;
+            line-height: 140%;
         }
 
         .banner {
@@ -54,12 +81,16 @@
 
         }
 
-        .sns {}
+        .sns {
+            height: "33px";
+            width: "33px"
+        }
 
         .menu {
             color: white;
             font-size: 15px;
             display: flex;
+
         }
 
         .footer-bottom {
@@ -67,10 +98,15 @@
             width: 100%;
         }
 
-        .footer-bottom {
+        .information {
+            width: 1600px;
             color: gray;
-            font-size: 12px;
+            font-size: 13px;
+            line-height: 20px;
 
+            display: flex;
+            justify-content: space-between;
+            /* 하다 말음 */
         }
 
         .information-left {}
@@ -80,56 +116,64 @@
 </head>
 
 <body>
-    <div class="container">
-        <div class="content">
-            <h2>24시간 언제나</h2>
-            <p>한밤중이나 주말에도 스마트폰으로
-                <br>시간에 구애받지 않고
-                <br>쏘카와 함께 이동하세요.
-            </p>
-        </div>
-        <div class="content-image">
-            <img src="" alt="">
-        </div>
-    </div>
+    <section id="intro">
 
-    <div class="container">
-        <div class="content">
-            <h2>원하는 곳에서</h2>
-            <p>내 주변 3분 거리 쏘카존에서
-                <br>혹은 내가 있는 곳으로 쏘카를 불러
-                <br>어디서나 편하게 출발하세요.
-            </p>
-        </div>
-        <div class="content-image">
-            <img src="" alt="">
-        </div>
-    </div>
+    </section>
 
-    <div class="container">
-        <div class="content">
-            <h2>필요한 시간만큼</h2>
-            <p>간단한 장보기부터 주말여행까지
-                <br>10분 단위로 원하는 만큼만 이용하세요.
-            </p>
-        </div>
-        <div class="content-image">
-            <img src="" alt="">
-        </div>
-    </div>
+    <section id="good-socar">
 
-    <div class="container">
-        <div class="content">
-            <h2>다양한 차종을</h2>
-            <p>연인과의 드라이브부터 가족 캠핑까지
-                <br>상황에 맞게 50여 종의 차량을
-                <br>선택해서 이용하세요.
-            </p>
+        <div class="container">
+            <div class="content">
+                <h2>24시간 언제나</h2>
+                <p>한밤중이나 주말에도 스마트폰으로
+                    <br>시간에 구애받지 않고
+                    <br>쏘카와 함께 이동하세요.
+                </p>
+            </div>
+            <div class="content-image">
+                <img src="img/usp_a.jpg" alt="이미지1">
+            </div>
         </div>
-        <div class="content-image">
-            <img src="" alt="">
+
+        <div class="container">
+            <div class="content">
+                <h2>원하는 곳에서</h2>
+                <p>내 주변 3분 거리 쏘카존에서
+                    <br>혹은 내가 있는 곳으로 쏘카를 불러
+                    <br>어디서나 편하게 출발하세요.
+                </p>
+            </div>
+            <div class="content-image">
+                <img src="img/usp_b.jpg" alt="이미지2">
+            </div>
         </div>
-    </div>
+
+        <div class="container">
+            <div class="content">
+                <h2>필요한 시간만큼</h2>
+                <p>간단한 장보기부터 주말여행까지
+                    <br>10분 단위로 원하는 만큼만 이용하세요.
+                </p>
+            </div>
+            <div class="content-image">
+                <img src="img/usp_c.jpg" alt="이미지3">
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="content">
+                <h2>다양한 차종을</h2>
+                <p>연인과의 드라이브부터 가족 캠핑까지
+                    <br>상황에 맞게 50여 종의 차량을
+                    <br>선택해서 이용하세요.
+                </p>
+            </div>
+            <div class="content-image">
+                <img src="img/usp_d.jpg" alt="이미지4">
+            </div>
+        </div>
+    </section>
+
 
     <div class="banner">
         <h3>9,031,684명의 회원이 쏘카와
@@ -142,10 +186,10 @@
     <div class="footer">
         <div class="footer-top">
             <div class="sns">
-
+                <i class="fa-brands fa-square-instagram"></i>
 
             </div>
-            <div class="menu">
+            <ul class="menu">
                 <li>회사소개</li>
                 <li>인재채용</li>
                 <li>나눔카</li>
@@ -155,7 +199,8 @@
                 <li>차량손해면책제도</li>
                 <li>고객센터</li>
                 <li>제휴 문의</li>
-            </div>
+            </ul>
+            <!-- li의 부모는 무조건 ul이나 ol이 되어야함 -->
         </div>
 
         <div class="footer-bottom">
