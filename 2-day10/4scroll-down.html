@@ -11,6 +11,7 @@
             width: 500px;
             height: 500px;
             background-color: gray;
+            position: relative;
 
         }
 
@@ -29,6 +30,7 @@
             box-sizing: border-box;
             border-radius: 16px;
             position: relative;
+            animation: mouse 2s infinite;
         }
 
         .wheel {
@@ -40,14 +42,49 @@
             left: 50%;
             top: 30%;
             transform: translate(-50%, -50%);
-            animation: wheel 1s infinite;
+            animation: wheel 2s infinite;
+        }
+
+
+        /* 나타나고 -> 내려가고 -> 사라진다.
+           나타난다 : opacity0 -> opacity1
+           사라진다 : opacity1 -> opacity0
+           opacity0 ->
+           opacity1 -> Y좌표 10px-> opacity0
+        */
+
+        @keyframes mouse {
+            from {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+
+            33% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            66% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(20px);
+            }
         }
 
 
         @keyframes wheel {
-            from {
-                transform: translateX(-50%) translateY(-50%);
+            from {}
 
+            33% {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            66% {
+                transform: translate(-50%) translateY(12px);
             }
 
             to {
