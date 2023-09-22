@@ -5,11 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
     <style>
         /* 1920px~1300px 1299px~800px 799px~0px */
         .container {
             display: flex;
-            gap: 8px;
+            gap: 40px;
+            padding: 32px;
         }
 
         .content {
@@ -18,17 +20,21 @@
             background-color: gray;
         }
 
-        @media screen and (max-width: px) and (min-width: px) {}
+        @media screen and (max-width: 1299px) {
+            .container {
+                flex-direction: column;
+            }
 
-        ;
+            .content {
+                width: 100%;
+            }
+        }
 
-        @media screen and (max-width: px) and (min-width: px) {}
-
-        ;
-
-        @media screen and (max-width: px) and (min-width: px) {}
-
-        ;
+        @media screen and (max-width: 799px) and (min-width: px) {
+            .container {
+                padding: 16px;
+            }
+        }
     </style>
 </head>
 
