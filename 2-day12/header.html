@@ -7,18 +7,51 @@
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
     <style>
+        body {
+            height: 10000px;
+            background-image: linear-gradient(#333, #AAA);
+        }
+
         header {
+            position: fixed;
+            background-color: white;
             width: 100%;
-            height: 100px;
-            background-color: aqua;
+            padding: 0 32px;
+            box-sizing: border-box;
+
+            height: 50px;
+            overflow: hidden;
 
         }
 
-        .ul {
-            width: 100%;
-            height: 200px;
-            background-color: red;
+        .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
+
+        ul {
+
+
+            display: flex;
+        }
+
+        ul>li {
+            color: black;
+
+            font-size: 20px;
+            align-items: center;
+
+
+        }
+
+
+        .header-list-container a {
+            padding: 24px;
+            display: block;
+        }
+
+        /* 속성을 주려면 그 대상의 부모요소에게 줘야한다. */
     </style>
 </head>
 
@@ -27,10 +60,21 @@
         <div class="container">
             <h1 class="logo"><a href="#">로고</a></h1>
             <nav>
-                <ul>
+                <ul class="header-list-container">
                     <li><a href="#">INNOSTAGE</a></li>
-                    <li><a href="#">Portfolio</a></li>
-                    <li><a href="#">Apply</a></li>
+                    <li>
+                        <a href="#">Portfolio</a>
+                        <ul class="inner-list-container">
+                            <li><a href="#">이노스테이지 기업</a></li>
+                            <li><a href="#">기업 탐색하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Apply</a>
+                        <ul class="inner-list-container">
+                            <li><a href="#">지원 프로그램</a></li>
+                            <li><a href="#">협업 제안</a></li>
+                        </ul>
+                    </li>
                     <li><a href="#">News</a></li>
                     <li><a href="#">Community</a></li>
                 </ul>
@@ -43,9 +87,3 @@
 <!-- a태그는 li안쪽으로 들어가야한다. -->
 
 </html>
-
-<li>이노스테이지 기업</li>
-<li>기업 탐색하기</li>
-
-<li>지원 프로그램</li>
-<li>협업 제안</li>
