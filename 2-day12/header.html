@@ -7,6 +7,18 @@
     <title>Document</title>
     <link rel="stylesheet" href="../reset.css">
     <style>
+        @font-face {
+            font-family: 'IAMAPLAYER';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/IAMAPLAYER.woff2') format('woff2');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        a {
+            color: #222;
+            text-decoration: none;
+        }
+
         body {
             height: 10000px;
             background-image: linear-gradient(#333, #AAA);
@@ -19,46 +31,148 @@
             padding: 0 32px;
             box-sizing: border-box;
 
-            height: 50px;
+            height: 64px;
+            transition: 1s;
             overflow: hidden;
 
+        }
+
+        header:hover {
+            height: 200px;
         }
 
         .container {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            /* height: 100px; */
         }
 
-        ul {
+        h1 {
+            font-family: 'IAMAPLAYER';
+            font-size: 28px;
+            border-top: 3px solid #222;
+            border-bottom: 3px solid #222;
+        }
 
+        .header-list-container {
+            display: flex;
+            /* position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%); */
+        }
+
+        .header-list-container>li {
+            position: relative;
+        }
+
+        .header-list-container>li>a {
+            display: block;
+            padding: 24px 48px;
+            font-weight: bold;
+        }
+
+        .inner-list-container {
+            left: 48px;
+            position: absolute;
+            /* display: none; */
+            height: 0;
+            overflow: hidden;
+            transition: 1s;
+            opacity: 0;
+
+            width: 100%;
 
             display: flex;
+            flex-direction: column;
+            gap: 16px;
         }
 
-        ul>li {
+        header:hover .inner-list-container {
+            /* display: block; */
+            height: auto;
+            opacity: 1;
+        }
+
+
+        /* ul>li { 
             color: black;
 
             font-size: 20px;
             align-items: center;
-
-
         }
+        */
 
 
-        .header-list-container a {
-            padding: 24px;
-            display: block;
+        .header-list-container {
+            display: flex;
+            /* position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%); */
+
         }
 
         /* 속성을 주려면 그 대상의 부모요소에게 줘야한다. */
+
+        .hamberger-menu {
+            display: none;
+        }
+
+        /* 햄버거 메뉴 정렬을 잘하기 위함 */
+        .icon-container {
+            display: flex;
+            gap: 16px;
+        }
+
+        @media screen and (max-width:1365px) {
+            header {
+                height: 80px;
+            }
+
+            .container {
+                height: 100%;
+            }
+
+            .header-list-container {
+                display: none;
+            }
+
+            header:hover {
+                height: 64px;
+            }
+
+            .hamberger-menu {
+                display: block;
+            }
+        }
+
+
+
+
+        .container1 {
+            height: 600px;
+            width: 100%;
+        }
+
+        .title {
+            color: white;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            color: white;
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
+    <!-- https://www.kyobolifeinnostage.co.kr/ 헤더 만들기 연습 -->
     <header>
         <div class="container">
-            <h1 class="logo"><a href="#">로고</a></h1>
+            <h1 class="logo"><a href="#">INNOSTAGE</a></h1>
             <nav>
                 <ul class="header-list-container">
                     <li><a href="#">INNOSTAGE</a></li>
@@ -69,7 +183,8 @@
                             <li><a href="#">기업 탐색하기</a></li>
                         </ul>
                     </li>
-                    <li><a href="#">Apply</a>
+                    <li>
+                        <a href="#">Apply</a>
                         <ul class="inner-list-container">
                             <li><a href="#">지원 프로그램</a></li>
                             <li><a href="#">협업 제안</a></li>
@@ -79,9 +194,18 @@
                     <li><a href="#">Community</a></li>
                 </ul>
             </nav>
-            <div class="icon-container"><a href="#">아이콘</a></div>
+            <div class="icon-container">
+                <a href="#">아이콘</a>
+                <a href="#" class="hamberger-menu">햄</a>
+            </div>
         </div>
     </header>
+
+
+    <div class="container1">
+        <h2 class="title">The stage for your growth</h2>
+        <h3 class="subtitle">교보생명과 스타트업이 함께 미래를 만들어갑니다</h3>
+    </div>
 </body>
 
 <!-- a태그는 li안쪽으로 들어가야한다. -->
