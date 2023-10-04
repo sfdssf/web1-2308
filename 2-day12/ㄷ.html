@@ -33,7 +33,6 @@
             height: 64px;
             transition: 1s;
             overflow: hidden;
-
         }
 
         header:hover {
@@ -131,62 +130,44 @@
             font-size: 24px;
         }
 
-        #content {
-            height: 100vh;
-            background-color: aqua;
-            padding: 200px 32px;
-
-            box-sizing: border-box;
-
+        #innostage {
+            background-color: pink;
         }
 
-        .section-wrapper {
-            max-width: 1296px;
-            margin: 0 auto;
-        }
+        .section-container {}
 
-        .content-title-container {}
+        .section-header-wrapper {}
 
-        .content-title {
-            color: black;
-            font-size: 30px;
+
+
+
+
+        .section-header-wrapper>h2 {
             font-weight: bold;
-        }
-
-        .content-subtitle {
-            color: gray;
-            font-size: 18px;
-        }
-
-        .content-contents {
-            display: flex;
-            justify-content: center;
-
-            gap: 48px;
-        }
-
-        .content-contents-box {
-            height: 400px;
-            width: 400px;
-            background-color: white;
-            border: px;
-
-        }
-
-        .content-contents-box:hover {
-            color: green;
+            font-size: 20px;
+            color: #222;
+            margin-bottom: 16px;
         }
 
 
-        .content-contents-box-title {
-            color: black;
-            font-size: 40px;
-            font-weight: bold;
+        .section-header-wrapper>h2::after {}
+
+        .section-header-wrapper>p {
+            color: #555;
         }
 
-        .content-contents-box-subtitle {
-            color: gray;
-        }
+        .innostage-list {}
+
+        .innostage-list-contents {}
+
+        .innostage-list-contents>h3 {}
+
+        .innostage-list-contents>p {}
+
+        .innostage-list-contents>a {}
+
+        .innostage-list-contents>a::after {}
+
 
 
         @media screen and (max-width:1365px) {
@@ -250,46 +231,39 @@
             </div>
         </div>
     </header>
-    <section id="intro">
-        <div class="intro-title-container">
-            <h2>The stage for your growth</h2>
-            <p>교보생명과 스타트업이 함께 미래를 만들어갑니다.</p>
-        </div>
-    </section>
-    <section id="content">
-        <div class="section-wrapper">
 
-            <div class="content-title-container">
-                <h2 class="content-title">INNOSTAGE</h2>
-                <p class="content-subtitle">육성과 투자로 빠른 성장을 지원합니다.</p>
+    <section id="innostage">
+        <div class="section-container">
+            <div class="section-header-wrapper">
+                <h2>INNOSTAGE</h2>
+                <p>육성과 투자로 빠른 성장을 지원합니다.</p>
             </div>
 
-
-            <!-- .content-contents-box:hover > svg {
-                fill : 연두색;
-            }-->
-            <div class="content-contents">
-                <div class="content-contents-box">
-                    <h2 class="content-contents-box-title">Acceleration</h2>
-                    <p class="content-contents-box-subtitle">교보생명 액셀러레이션 프로그램</p>
-                    <svg class="content-contents-box-subtitle-icon" xmlns="http://www.w3.org/2000/svg" width="40"
-                        height="40" viewBox="0 0 40 40" fill="none">
-                        <rect width="40" height="40" rx="20" fill="#191919" />
-                        <path d="M18 15L23 20L18 25" stroke="white" stroke-width="2" />
-                    </svg>
-                </div>
-                <div class="content-contents-box">
-                    <h2 class="content-contents-box-title">Investment</h2>
-                    <p class="content-contents-box-subtitle">전략적 목적에 따른 직.간접 투자</p>
-                </div>
-                <div class="content-contents-box">
-                    <h2 class="content-contents-box-title">Portfolio</h2>
-                    <p class="content-contents-box-subtitle">육성 및 투자 기업 소개</p>
-                </div>
-            </div>
+            <ul class="innostage-list">
+                <li class="innostage-list-contents">
+                    <h3>Acceleration</h3>
+                    <p>교보생명 액셀러레이션 프로그램</p>
+                    <a href="#"></a>
+                </li>
+                <li class="innostage-list-contents">
+                    <h3>Investment</h3>
+                    <p>전략적 목적에 따른 직·간접 투자</p>
+                    <a href="#"></a>
+                </li>
+                <li class="innostage-list-contents">
+                    <h3>Portfolio</h3>
+                    <p>육성 및 투자 기업 소개</p>
+                    <a href="#"></a>
+                </li>
+            </ul>
         </div>
     </section>
 
+    <svg class="content-contents-box-subtitle-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+        viewBox="0 0 40 40" fill="none">
+        <rect width="40" height="40" rx="20" fill="#191919" />
+        <path d="M18 15L23 20L18 25" stroke="white" stroke-width="2" />
+    </svg>
 
 </body>
 
