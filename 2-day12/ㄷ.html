@@ -131,16 +131,18 @@
         }
 
         #innostage {
+            padding: 120px 0;
             background-color: pink;
         }
 
-        .section-container {}
+        .section-container {
+            margin: 0 auto;
+            width: 1240px;
+        }
 
-        .section-header-wrapper {}
-
-
-
-
+        .section-header-wrapper {
+            margin-bottom: 48px;
+        }
 
         .section-header-wrapper>h2 {
             font-weight: bold;
@@ -149,24 +151,124 @@
             margin-bottom: 16px;
         }
 
-
-        .section-header-wrapper>h2::after {}
+        .section-header-wrapper>h2::after {
+            display: inline-block;
+            content: '';
+            border-radius: 50%;
+            width: 6px;
+            height: 6px;
+            background-color: green;
+            margin-left: 4px;
+        }
 
         .section-header-wrapper>p {
             color: #555;
         }
 
-        .innostage-list {}
+        .innostage-list {
+            /* width: 1240px; */
+            display: flex;
+            justify-content: space-between;
+        }
 
-        .innostage-list-contents {}
+        .innostage-list-contents {
+            border-radius: 24px;
+            width: calc((100% - (40px * 2))/3);
+            height: 380px;
+            background-color: #AAA;
+            border: 1px solid #222;
+            padding: 32px;
 
-        .innostage-list-contents>h3 {}
+            box-sizing: border-box;
+        }
 
-        .innostage-list-contents>p {}
+        .innostage-list-contents>h3 {
+            margin-bottom: 16px;
+            font-size: 32px;
+            font-weight: 700;
+            color: #222;
+            background-color: pink;
+        }
 
-        .innostage-list-contents>a {}
+        .innostage-list-contents>p {
+            color: #444;
+            margin-bottom: 28px;
+        }
 
-        .innostage-list-contents>a::after {}
+        .innostage-list-contents>a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #222;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+
+        .innostage-list-contents>a::after {
+            content: '';
+            display: block;
+            width: 6px;
+            height: 6px;
+            border: 1px solid white;
+            transform: translateX(-25%) rotate(45deg);
+            border-left: none;
+            border-bottom: none;
+        }
+
+        #performance {
+            background-color: #01B18B;
+            color: white;
+        }
+
+        #performance>.section-container {
+            display: flex;
+        }
+
+        #performance .section-header-wrapper {
+            width: 50%;
+        }
+
+        #performance .section-header-wrapper>h2 {
+            color: white;
+        }
+
+        #performance .section-header-wrapper>h2::after {
+            color: #EEE;
+        }
+
+        #performance .section-header-wrapper>p {
+            color: rgba(255, 255, 255, .8);
+        }
+
+        #performance .counter-list-container {
+            width: 50%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .counter-container {
+            width: 50%;
+        }
+
+        .counter-heading-wrapper {
+            display: flex;
+            gap: 4px;
+        }
+
+        .temp-img {
+            width: 24px;
+            height: 24px;
+            background-color: rgba(255, 255, 255, .8);
+        }
+
+        .counter-heading-wrapper>h3 {
+            color: rgba(255, 255, 255, .8);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        #performance .section-header-wrapper {}
 
 
 
@@ -259,11 +361,66 @@
         </div>
     </section>
 
-    <svg class="content-contents-box-subtitle-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40"
+    <!-- <svg class="content-contents-box-subtitle-icon" xmlns="http://www.w3.org/2000/svg" width="40" height="40" 
         viewBox="0 0 40 40" fill="none">
         <rect width="40" height="40" rx="20" fill="#191919" />
         <path d="M18 15L23 20L18 25" stroke="white" stroke-width="2" />
-    </svg>
+    </svg> -->
+
+    <section id="performance">
+        <div class="section-container">
+            <div class="section-header-wrapper">
+                <h2>Performance</h2>
+                <P>뛰어난 기술력과 성장 잠재력을<br>갖춘 스타트업과 함께 합니다.</P>
+            </div>
+
+            <ul class="counter-list-container">
+                <li class="counter-container">
+                    <div class="counter-heading-wrapper">
+                        <div class="temp-img"></div>
+                        <h3>발굴 기업 수</h3>
+                    </div>
+                    <div class="counter-contents">
+                        <p class="counter">1307</p>
+                        <p class="counter-unit">개 사</p>
+                    </div>
+                </li>
+                <li class="counter-container">
+                    <div class="counter-heading-wrapper">
+                        <div class="temp-img"></div>
+                        <h3>누적 육성 기업 수</h3>
+                    </div>
+                    <div class="counter-contents">
+                        <p class="counter">40</p>
+                        <p class="counter-unit">개 사</p>
+                    </div>
+                </li>
+                <li class="counter-container">
+                    <div class="counter-heading-wrapper">
+                        <div class="temp-img"></div>
+                        <h3>누적 협업 건 수</h3>
+                    </div>
+                    <div class="counter-contents">
+                        <p class="counter">120</p>
+                        <p class="counter-unit">건 수</p>
+                    </div>
+                </li>
+                <li class="counter-container">
+                    <div class="counter-heading-wrapper">
+                        <div class="temp-img"></div>
+                        <h3>누적 투자 금액</h3>
+                    </div>
+                    <div class="counter-contents">
+                        <p class="counter">719</p>
+                        <p class="counter-unit">억 원</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </section>
+
+
 
 </body>
 
