@@ -59,7 +59,6 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%); */
-
         }
 
         .header-list-container>li {
@@ -219,6 +218,7 @@
         #performance {
             background-color: #01B18B;
             color: white;
+            padding: 100px 0;
         }
 
         #performance>.section-container {
@@ -234,7 +234,7 @@
         }
 
         #performance .section-header-wrapper>h2::after {
-            color: #EEE;
+            background-color: #EEE;
         }
 
         #performance .section-header-wrapper>p {
@@ -245,20 +245,29 @@
             width: 50%;
             display: flex;
             flex-wrap: wrap;
+            /* justify-content: space-between; 
+            row-gap: 24px;
+            column-gap: 24px;*/
+            gap: 24px;
         }
 
         .counter-container {
-            width: 50%;
+            width: 298px;
+            /* calc */
+
+            border-top: 1px solid #ddd;
+            padding: 32px 0;
         }
 
         .counter-heading-wrapper {
             display: flex;
             gap: 4px;
+            margin-bottom: 32px;
         }
 
         .temp-img {
-            width: 24px;
-            height: 24px;
+            width: 20px;
+            height: 20px;
             background-color: rgba(255, 255, 255, .8);
         }
 
@@ -268,8 +277,53 @@
             font-size: 14px;
         }
 
-        #performance .section-header-wrapper {}
+        .counter-contents {
+            display: flex;
+            align-items: flex-end;
+        }
 
+        .counter {
+            font-size: 80px;
+        }
+
+        .counter-unit {
+            font-size: 15px;
+        }
+
+        /* calc (안에 있는걸 계산)
+        100% + 20% 
+        120%
+
+        calc(100% - 20px) 단위가 다른 두개의 수치를 서로 계산해야 할때
+
+        */
+
+        #collaboration {
+            background-color: white;
+        }
+
+        #collaboration .section-container {}
+
+        #collaboration .section-header-wrapper {}
+
+        #collaboration .section-header-wrapper>h2 {}
+
+        #collaboration .section-header-wrapper>p {}
+
+        #collaboration .collabo-contents-container {}
+
+        #collaboration .collabo-list-container {}
+
+        #collaboration .collabo-list-container {}
+
+        #collaboration .collabo-content-link {}
+
+        <h3>째깍악어</h3><h3 class=" collabo-content-p">아이 돌봄 및 선생님 매칭 플랫폼</h3><p class=" category">육성.투자</p></a></li>#collaboration {}
+
+
+        #collaboration collabo-list-container choice>h3 {
+            font-weight: bold;
+        }
 
 
         @media screen and (max-width:1365px) {
@@ -418,6 +472,50 @@
             </ul>
         </div>
 
+    </section>
+
+    <section id="collaboration">
+        <div class="section-container">
+            <div class="section-header-wrapper">
+                <h2>Collaboration</h2>
+                <p>교보생명과 스타트업 간의 우수 협업 사례를 소개합니다.</p>
+            </div>
+
+            <div class="collabo-contents-container">
+                <!-- img src="" alt=""> -->
+                <div class="temp-img"></div>
+                <ul class="collabo-list-container">
+                    <li class="collabo-list-container choice">
+                        <a href="#" class="collabo-content-link">
+                            <h3>째깍악어</h3>
+                            <h3 class="collabo-content-p">아이 돌봄 및 선생님 매칭 플랫폼</h3>
+                            <p class="category">육성.투자</p>
+                        </a>
+                    </li>
+                    <li class="collabo-list-container choice">
+                        <a href="#" class="collabo-content-link">
+                            <h3>그린리본</h3>
+                            <h3 class="collabo-content-p">AI 기반 보험금 청구 자동화 서비스</h3>
+                            <p class="category">육성.투자</p>
+                        </a>
+                    </li>
+                    <li class="collabo-list-container choice">
+                        <a href="#" class="collabo-content-link">
+                            <h3>프렌트립</h3>
+                            <h3 class="collabo-content-p">취미 여가 플랫폼</h3>
+                            <p class="category">육성.투자</p>
+                        </a>
+                    </li>
+                    <li class="collabo-list-container choice">
+                        <a href="#" class="collabo-content-link">
+                            <h3>로민</h3>
+                            <h3 class="collabo-content-p">문서 업무 자동화를 돕는 인공지능</h3>
+                            <p class="category">육성</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
     </section>
 
 
