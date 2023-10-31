@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        a {
+            color: #222;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .outter-list-container {
+            display: flex;
+        }
+
+        .outter-list {
+            width: 240px;
+            line-height: 50px;
+            background-color: #222;
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .outter-list>a {
+            color: white;
+        }
+
+        .inner-list-container {
+            height: 0px;
+            /* 숨겨야지 열린다. */
+
+            overflow: hidden;
+            transition: 1s;
+            position: absolute;
+        }
+
+        .outter-list:hover>.inner-list-container {
+            height: 200px;
+        }
+
+        .inner-list {
+            width: 240px;
+            height: 50px;
+            border: 1px solid #222;
+            background-color: white;
+            box-sizing: border-box;
+        }
+
+        .test {
+            height: 100px;
+            width: 400px;
+            background-color: pink;
+            transition: 1s;
+        }
+
+        .test:hover {
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 여러줄 한번에 선택하는 법 ctrl + alt -->
+
+    <!-- header>ul.outter-list-container>li.outter-list*5>a{MENU$}+ul.inner-list-container>li.inner-list*4>a{inner-menu} -->
+
+    <header>
+        <ul class="outter-list-container">
+            <li class="outter-list">
+                <a href="">MENU1</a>
+                <ul class="inner-list-container">
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                </ul>
+            </li>
+            <li class="outter-list">
+                <a href="">MENU2</a>
+                <ul class="inner-list-container">
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                </ul>
+            </li>
+            <li class="outter-list">
+                <a href="">MENU3</a>
+                <ul class="inner-list-container">
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                </ul>
+            </li>
+            <li class="outter-list">
+                <a href="">MENU4</a>
+                <ul class="inner-list-container">
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                </ul>
+            </li>
+            <li class="outter-list">
+                <a href="">MENU5</a>
+                <ul class="inner-list-container">
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                    <li class="inner-list"><a href="">inner-menu</a></li>
+                </ul>
+            </li>
+        </ul>
+    </header>
+    <div class="test">Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere, in! Veniam officiis culpa odit
+        ipsum. Laborum iure, magnam id dignissimos dolorum quae distinctio fugit reiciendis natus culpa aliquid
+        molestiae voluptatum.</div>
+
+
+    <!-- 순서가 있는 리스트를 적을 때 -->
+    <ol>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ol>
+    1.
+    2.
+    3.
+    4.
+
+    <!-- 순서가 없는 리스트를 적을 때 -->
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+    ?.
+    ?.
+    ?.
+    ?.
+</body>
+
+</html>

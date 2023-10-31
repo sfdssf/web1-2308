@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .dice {
+            position: relative;
+            transform-style: preserve-3d;
+            width: 160px;
+            height: 160px;
+        }
+
+        .dice-face {
+            width: 160px;
+            height: 160px;
+
+            border: 1px solid #222;
+
+            color: white;
+            font-size: 36px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #444;
+
+            position: absolute;
+
+            transform: translateZ(0px, 0px, 80px);
+
+            opacity: 0.3;
+
+            transform-origin: center center -80px;
+        }
+
+        .dice-face.one {
+            transform: translate3d(0px, 0px, 80px) rotateY(0deg);
+        }
+
+        .dice-face.two {
+            transform: translate3d(0px, 0px, 80px) rotateY(90deg);
+        }
+
+        .dice-face.three {
+            transform: translate3d(0px, 0px, 80px) rotateX(90deg);
+        }
+
+        .dice-face.four {
+            transform: translate3d(0px, 0px, 80px) rotateX(-90deg);
+        }
+
+        .dice-face.five {
+            transform: translate3d(0px, 0px, 80px) rotateY(270deg);
+        }
+
+        .dice-face.six {
+            transform: translate3d(0px, 0px, 80px) rotateY(180deg);
+        }
+
+        element.style {
+            transform: rotate3d(1, 1, 1, 45deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="dice">
+        <!-- div.dice-face{$}*6 -->
+
+        <div class="dice-face one">1</div>
+        <div class="dice-face two">2</div>
+        <div class="dice-face three">3</div>
+        <div class="dice-face four">4</div>
+        <div class="dice-face five">5</div>
+        <div class="dice-face six">6</div>
+
+    </div>
+
+</body>
+
+</html>

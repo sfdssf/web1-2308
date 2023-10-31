@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../reset.css">
+    <style>
+        section {
+            width: 500px;
+            height: 500px;
+            background-color: gray;
+            position: relative;
+
+        }
+
+        .ani-container {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%);
+
+        }
+
+        .mouse {
+            width: 32px;
+            height: 48px;
+            border: 3px solid white;
+            box-sizing: border-box;
+            border-radius: 16px;
+            position: relative;
+            animation: mouse 2s infinite;
+        }
+
+        .wheel {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background-color: white;
+            position: absolute;
+            left: 50%;
+            top: 30%;
+            transform: translate(-50%, -50%);
+            animation: wheel 2s infinite;
+        }
+
+
+        /* 나타나고 -> 내려가고 -> 사라진다.
+           나타난다 : opacity0 -> opacity1
+           사라진다 : opacity1 -> opacity0
+           opacity0 ->
+           opacity1 -> Y좌표 10px-> opacity0
+        */
+
+        @keyframes mouse {
+            from {
+                opacity: 0;
+                transform: translateY(0) scale(0);
+            }
+
+            33% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            66% {
+                opacity: 1;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+        }
+
+
+        @keyframes wheel {
+            from {}
+
+            33% {
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            66% {
+                transform: translate(-50%) translateY(12px);
+            }
+
+            to {
+                transform: translateX(-50%) translateY(12px);
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section>
+        <div class="ani-container">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
